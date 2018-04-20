@@ -1,0 +1,14 @@
+
+<view class="root">
+  <!-- <view bindtap='getHestoryToday'>
+    <text class="title">当前：{{toDay}}</text>
+  </view>  -->
+  <scroll-view class="scroll" scroll-y="true" scroll-top="{{scrollTop}}">
+    <block class="" wx:for="{{eventData}}" wx:key="id">
+      <view id="{{item.e_id}}" class='item' bindtap='openDetail' data-index='{{index}}'>
+        <text class="text">{{item.date}}</text>
+        <text class="text">{{item.title}}</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>

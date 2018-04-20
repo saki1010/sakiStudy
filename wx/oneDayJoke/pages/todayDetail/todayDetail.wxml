@@ -1,0 +1,33 @@
+<!--pages/todayDetail/todayDetail.wxml-->
+<view class='container'>
+  <view class='root' wx:for="{{event.result}}" wx:key="id" wx:for-index="index2">
+  <view data-index='{{index2}}'>
+    <text class='title'>{{item.title}}</text>
+
+    <!-- <scroll-view class='' scroll-x='true'>
+     <block wx:for="{{item.picUrl}}" wx:for-item="child" wx:key="id2">
+              <view class='childItem' bindtap='previewImage' data-index='{{index}}' data-position='{{index2}}'>
+                <image src='{{child.url}}' class='image'></image>
+                <text class='imageTitle'>{{child.pic_title}}</text> 
+              </view>
+            </block>
+    </scroll-view> -->
+    
+    <swiper class= "{{item.picUrl.length > 0? 'show':'hide'}}" indicator-dots="true" indicator-active-color='#00ff00' circular='true'
+     current='0' autoplay="false" interval="3000" duration="500">
+      <block wx:for="{{item.picUrl}}" wx:for-item="child" wx:key="id2">
+        <swiper-item>
+        
+          <view wx:if='{{item}}' class='childItem' bindtap='previewImage' data-index='{{index}}' data-position='{{index2}}'>
+                <image src='{{child.url}}' class='image'></image>
+                <text class='imageTitle'>{{child.pic_title}}</text> 
+              </view>
+        </swiper-item>
+      </block>
+    </swiper>
+      
+  </view>
+    
+    <text class='content'>{{item.content}}</text>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+/**index.wxss**/
+page{background: #98FB98;height: 100%}
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  color: #f5f5f5;
+  margin-left: 30rpx;
+}
+
+.title {
+  color: #CD950C;
+  font-size: 28rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background: #CDC0B0;
+}
+
+.scroll {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,0 +1,33 @@
+<!--pages/dayJoke/dayJoke.wxml-->
+<view class='page'>
+
+  <view class="navbar">  
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+  </view>  
+    
+  <!--笑话-->  
+  <view hidden="{{currentTab!==0}}">  
+    <view class='column' wx:for="{{jokeDatas}}" wx:key='id'>
+    <view class='itemColumn'>
+       <!-- //中文全角输入空格 -->
+      <text class='itemContent'>　　{{item.content}}</text> 
+      <text class='itemTime'>更新时间：{{item.updatetime}}</text>
+    </view>
+     <view class='line'></view>
+    </view>
+  </view>  
+    
+  <!--趣图-->  
+  <view hidden="{{currentTab!==1}}">  
+    <view class='itemColumn' wx:for="{{imageDatas}}" wx:key='id'>
+      <text class='imageTitle'>{{item.content}}</text> 
+      <image bindtap='lookBigPic' src='{{item.url}}' class='itemImage' data-img="{{item.url}}"></image>
+      <text class='itemTime'>更新时间：{{item.updatetime}}</text>
+    </view> 
+  </view>  
+  <view class="weui-loadmore" hidden="{{isHideLoadMore}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+</view>
+ 

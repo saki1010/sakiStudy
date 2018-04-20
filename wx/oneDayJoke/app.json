@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/historyToday/historyToday",
+    "pages/logs/logs",
+    "pages/dayJoke/dayJoke",
+    "pages/todayDetail/todayDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#98FB98",
+    "navigationBarTitleText": "one day joke",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/historyToday/historyToday",
+        "text": "历史今天",
+        "iconPath": "img/day_normal.png",
+        "selectedIconPath": "img/day_select.png"
+      },
+      {
+        "pagePath": "pages/dayJoke/dayJoke",
+        "text": "每日一笑",
+        "iconPath": "img/joke_normal.png",
+        "selectedIconPath": "img/joke_select.png"
+      }
+    ],
+    "color": "#888888",
+    "selectedColor": "#BF3EFF",
+    "backgroundColor": "#f5f5f5"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}
